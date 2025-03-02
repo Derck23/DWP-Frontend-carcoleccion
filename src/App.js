@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'antd/dist/reset.css';
 import Login from './Pages/Login/Login';
 import Registro from './Pages/Registro/Registro';
 import Bienvenida from './Pages/Bienvenida/Bienvenida';

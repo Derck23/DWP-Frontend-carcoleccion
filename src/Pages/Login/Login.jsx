@@ -1,10 +1,14 @@
 import React from 'react';
+import Header from '../../Layouts/Header';
+import BackgroundImage from '../../Components/BackgroundImagen';
+import LoginForm from './LoginForm';
 
 const Login = () => {
     return (
         <div>
-            <h2>Login Page</h2>
-            {/* Aquí irán los componentes y formularios para el login */}
+            <Header />
+            <BackgroundImage />
+            <LoginForm />
         </div>
     );
 };

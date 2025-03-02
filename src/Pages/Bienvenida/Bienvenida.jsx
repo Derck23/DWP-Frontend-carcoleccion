@@ -1,10 +1,16 @@
 import React from 'react';
+import Header from '../../Layouts/Header';
+import BackgroundImage from '../../Components/BackgroundImagen';
+import MainText from '../../Components/MainText';
+import Buttons from './Buttons';
 
 const Bienvenida = () => {
     return (
         <div>
-            <h2>Bienvenida Page</h2>
-            {/* Aquí irán los componentes de bienvenida */}
+            <Header />
+            <BackgroundImage />
+            <MainText />
+            <Buttons />
         </div>
     );
 };

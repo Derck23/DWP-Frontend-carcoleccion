@@ -1,10 +1,14 @@
 import React from 'react';
+import Header from '../../Layouts/Header';
+import BackgroundImage from '../../Components/BackgroundImagen';
 
 const Registro = () => {
     return (
         <div>
-            <h2>Registro Page</h2>
-            {/* Aquí irán los componentes y formularios para el registro */}
+            <Header />
+            <BackgroundImage />
+            {//<RegistroForm />
+            }
         </div>
     );
 };

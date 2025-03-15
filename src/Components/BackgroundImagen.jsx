@@ -1,7 +1,7 @@
 import React from 'react';
 import VWImage from '../assets/VW.jpg';
 
-const BackgroundImage = () => {
+const BackgroundImage = ({ children }) => {
     return (
         <div style={{ 
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${VWImage})`, 
@@ -9,6 +9,7 @@ const BackgroundImage = () => {
             height: '100vh', 
             position: 'relative' 
         }}>
+            {children}
         </div>
     );
 };

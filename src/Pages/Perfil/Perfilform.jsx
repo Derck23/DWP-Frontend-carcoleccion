@@ -1,9 +1,22 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
+import userImage from '../../assets/user.png';
 
-const RegistroForm = () => {
+const Perfilform = () => {
     return (
         <div className="form-container register-form">
+            <img 
+                src={userImage} 
+                alt="User" 
+                style={{ 
+                    width: '120px', 
+                    height: '120px', 
+                    borderRadius: '50%', 
+                    marginBottom: '20px',
+                    border: '3px solid #007BFF',
+                    objectFit: 'cover' // Asegura que la imagen se ajuste correctamente
+                }} 
+            />
             <h2 className="form-header register-header">Registro</h2>
             <Form
                 name="registro"
@@ -41,17 +54,12 @@ const RegistroForm = () => {
 
                 <Form.Item>
                     <Button type="primary" htmlType="submit" className="form-button" onClick={() => window.location.href = '/login'}>
-                        Registrar
+                        Guardar Modificaciones
                     </Button>
                 </Form.Item>
             </Form>
-            <div>
-                    <button className="register-extra-button" onClick={() => window.location.href = '/login'}> 
-                        Ya tengo cuenta
-                    </button>
-            </div>
         </div>
     );
 };
 
-export default RegistroForm;
+export default Perfilform;

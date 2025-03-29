@@ -39,7 +39,7 @@ const Header = () => {
             }}>
                 {/* Enlaces centrados */}
                 {isAuth && (<Link to="/" style={{ color: 'white', textDecoration: 'none', fontSize: '1.2rem' }}>Inicio</Link>)}
-                <Link to="/dashboard" style={{ color: 'white', textDecoration: 'none', fontSize: '1.2rem' }}>Home</Link> 
+                <Link to="/dashboardAdmin" style={{ color: 'white', textDecoration: 'none', fontSize: '1.2rem' }}>Home</Link> 
                 <Link to="/contacto" style={{ color: 'white', textDecoration: 'none', fontSize: '1.2rem' }}>Contacto</Link> 
                 <Link to="/perfil" style={{ color: 'white', textDecoration: 'none', fontSize: '1.2rem' }}>Perfil</Link>
     

@@ -1,0 +1,90 @@
+.nueva-subasta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    padding: 20px;
+  }
+  
+  .nueva-subasta-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .nueva-subasta-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .nueva-subasta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nueva-subasta-form label {
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+  }
+  
+  .nueva-subasta-input,
+  .nueva-subasta-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.3s;
+  }
+  
+  .nueva-subasta-input:focus,
+  .nueva-subasta-select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .nueva-subasta-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .nueva-subasta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .nueva-subasta-file-input {
+    display: none;
+  }
+  
+  .nueva-subasta-file-label {
+    display: block;
+    padding: 12px;
+    background: #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .nueva-subasta-file-label:hover {
+    background: #ccc;
+  }
+  

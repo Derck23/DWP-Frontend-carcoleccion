@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../../Layouts/Header';
+import Header from '../../Layouts/HeaderAdmin';
 
-function Escala1_43() {
+function Escala143A() {
     return (
         
         
@@ -14,4 +14,4 @@ function Escala1_43() {
     );
 }
 
-export default Escala1_43;
+export default Escala143A;

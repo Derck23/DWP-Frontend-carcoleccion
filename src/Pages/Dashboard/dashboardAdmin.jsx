@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../../Layouts/Header';
+import Header from '../../Layouts/HeaderAdmin';
 import BackgroundImage from '../../Components/BackgroundImagen';
-import Menu from '../../Components/Menu';
+import Menu from '../../Components/MenuAdmin';
 
 function Dashboard() {
     return (

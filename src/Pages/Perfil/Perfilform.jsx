@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Input, Button } from 'antd';
+import { jwtDecode } from 'jwt-decode';
+import { getUserData } from '../../services/authService';
 import userImage from '../../assets/user.png';
 
 const Perfilform = () => {
+    const [userData, setUserData] = useState(null);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    console.error('No token found');
+                    return;
+                }
+
+                // Decodificar el token para obtener el ID del usuario
+                const decodedToken = jwtDecode(token);
+                const userId = decodedToken.id;
+
+                // Obtener los datos del usuario desde el backend
+                const data = await getUserData(userId);
+                setUserData(data);
+            } catch (error) {
+                console.error('Error al obtener los datos del usuario:', error);
+            }
+        };
+
+        fetchUserData();
+    }, []);
+
+    if (!userData) {
+        return <p>Cargando datos del usuario...</p>;
+    }
+
     return (
         <div className="form-container register-form">
             <img 
@@ -14,15 +46,19 @@ const Perfilform = () => {
                     borderRadius: '50%', 
                     marginBottom: '20px',
                     border: '3px solid #007BFF',
-                    objectFit: 'cover' // Asegura que la imagen se ajuste correctamente
+                    objectFit: 'cover' 
                 }} 
             />
-            <h2 className="form-header register-header">Registro</h2>
+            <h2 className="form-header register-header">Perfil</h2>
             <Form
-                name="registro"
-                initialValues={{ remember: true }}
-                onFinish={(values) => console.log('Success:', values)}
-                onFinishFailed={(errorInfo) => console.log('Failed:', errorInfo)}
+                name="perfil"
+                initialValues={{
+                    email: userData.email,
+                    fullName: userData.nombre,
+                    username: userData.username,
+                }}
+                onFinish={(values) => console.log('Datos actualizados:', values)}
+                onFinishFailed={(errorInfo) => console.log('Error al actualizar:', errorInfo)}
             >
                 <Form.Item
                     name="email"
@@ -44,16 +80,9 @@ const Perfilform = () => {
                 >
                     <Input placeholder="Usuario" />
                 </Form.Item>
-
-                <Form.Item
-                    name="password"
-                    rules={[{ required: true, message: 'Por favor, ingrese su contraseña!' }]}
-                >
-                    <Input.Password placeholder="Contraseña" />
-                </Form.Item>
-
+                
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" className="form-button" onClick={() => window.location.href = '/login'}>
+                    <Button type="primary" htmlType="submit" className="form-button">
                         Guardar Modificaciones
                     </Button>
                 </Form.Item>

@@ -113,11 +113,20 @@ export const changePasswordWithToken = async (token, newPassword) => {
 export const getUserData = async (userId) => {
     try {
         const response = await api.get(`/usuarios/${userId}`);
-        return response.data.data; // Devuelve los datos del usuario
+        return response.data.data;
     } catch (error) {
         throw error.response?.data?.intMessage || "Error al obtener los datos del usuario";
     }
 };
+
+export const updateUserProfile = async (userId, updatedData) => {
+    try {
+      const response = await api.put(`/users/${userId}`, updatedData);
+      return response.data;
+    } catch (error) {
+      throw error.response?.data?.intMessage || "Error al actualizar el perfil";
+    }
+  };
 
 export const logoutUser = () => {
     localStorage.removeItem("token");

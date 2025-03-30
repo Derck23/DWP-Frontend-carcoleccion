@@ -5,7 +5,6 @@ import { registerColeccionables } from '../../services/coleccionablesService';
 
 function NuevaSubasta() {
     const [nombre, setNombre] = useState('');
-    const [precio, setPrecio] = useState('');
     const [escala, setEscala] = useState('');
     const [fechaLimite, setFechaLimite] = useState('');
     const [imagenes, setImagenes] = useState(null);
@@ -15,7 +14,6 @@ function NuevaSubasta() {
 
         const formData = new FormData();
         formData.append("nombre", nombre);
-        formData.append("precio", precio);
         formData.append("escala", escala);
         formData.append("fechaLimite", fechaLimite);
 
@@ -30,7 +28,6 @@ function NuevaSubasta() {
             console.log("Coleccionable registrado:", response);
             alert("Subasta registrada con éxito");
             setNombre('');
-            setPrecio('');
             setEscala('');
             setFechaLimite('');
             setImagenes(null);
@@ -50,11 +47,7 @@ function NuevaSubasta() {
                     <h1 className="nueva-subasta-title">Registra una Nueva Subasta</h1>
                     <form onSubmit={handleSubmit} className="nueva-subasta-form">
                         <label>Nombre del Artículo</label>
-                        <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} required className="nueva-subasta-input" placeholder="Ej: Avión Boeing 747"/>
-
-                        <label>Precio Inicial ($)</label>
-                        <input type="number" value={precio} onChange={(e) => setPrecio(e.target.value)} required min="0" step="0.01" className="nueva-subasta-input" placeholder="0.00"/>
-
+                        <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} required className="nueva-subasta-input" placeholder="Hotweels Sth"/>
                         <label>Escala</label>
                         <select value={escala} onChange={(e) => setEscala(e.target.value)} required className="nueva-subasta-select">
                             <option value="">Selecciona una escala</option>

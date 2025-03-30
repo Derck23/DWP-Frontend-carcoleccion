@@ -62,7 +62,7 @@ function Menu() {
                         </li>
                         <li style={{ padding: '10px' }}>
                             <button 
-                                onClick={() => handleNavigation('/escala-1-18A')} 
+                                onClick={() => handleNavigation('/escala-1-18')} 
                                 style={{ textDecoration: 'none', color: 'black', display: 'block', width: '100%', textAlign: 'left', backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}
                             >
                                 Escala 1:18
@@ -70,7 +70,7 @@ function Menu() {
                         </li>
                         <li style={{ padding: '10px' }}>
                             <button 
-                                onClick={() => handleNavigation('/escala-1-24A')} 
+                                onClick={() => handleNavigation('/escala-1-24')} 
                                 style={{ textDecoration: 'none', color: 'black', display: 'block', width: '100%', textAlign: 'left', backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}
                             >
                                 Escala 1:24
@@ -78,7 +78,7 @@ function Menu() {
                         </li>
                         <li style={{ padding: '10px' }}>
                             <button 
-                                onClick={() => handleNavigation('/escala-1-43A')} 
+                                onClick={() => handleNavigation('/escala-1-43')} 
                                 style={{ textDecoration: 'none', color: 'black', display: 'block', width: '100%', textAlign: 'left', backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}
                             >
                                 Escala 1:43
@@ -86,7 +86,7 @@ function Menu() {
                         </li>
                         <li style={{ padding: '10px' }}>
                             <button 
-                                onClick={() => handleNavigation('/escala-1-64A')} 
+                                onClick={() => handleNavigation('/escala-1-64')} 
                                 style={{ textDecoration: 'none', color: 'black', display: 'block', width: '100%', textAlign: 'left', backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}
                             >
                                 Escala 1:64

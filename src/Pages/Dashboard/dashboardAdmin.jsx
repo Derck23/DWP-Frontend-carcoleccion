@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../Layouts/HeaderAdmin';
+import Header from '../../Layouts/Header';
 import BackgroundImage from '../../Components/BackgroundImagen';
 import Menu from '../../Components/MenuAdmin';
 

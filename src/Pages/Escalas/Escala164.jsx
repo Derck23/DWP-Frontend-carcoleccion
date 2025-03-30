@@ -29,7 +29,6 @@ function Escala164() {
             {coleccionables.map((item) => (
               <div key={item.id} className="card">
                 <h3>{item.nombre}</h3>
-                        <p>Precio: ${item.precio}</p>
                         <p>Fecha Límite: {new Date(item.fechaLimite).toLocaleDateString()}</p>
                         {item.imagenes && item.imagenes.length > 0 && (
                         <img src={item.imagenes[0]} alt={item.nombre} className="card-image" />

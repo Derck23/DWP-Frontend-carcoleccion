@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Form, Input, Button, message, Radio } from 'antd';
 import { requestPasswordRecovery } from '../../services/authService';
 
-//const { Step } = Steps;
-
 const PasswordRecoveryRequest = ({ onMethodSelected }) => {
     const [loading, setLoading] = useState(false);
     const [availableMethods, setAvailableMethods] = useState(null);

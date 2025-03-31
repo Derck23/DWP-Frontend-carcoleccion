@@ -77,8 +77,8 @@ const LoginForm = () => {
             </Button>
           </Form.Item>
         </Form>
-        <p style={{ textAlign: 'center', marginTop: '16px' }}>
-            <a href="/forgot-password">¿Olvidaste tu contraseña?</a>
+        <p >
+            <a style={{ textAlign: 'center', marginTop: '16px', color: 'White' }} href="/forgot-password">¿Olvidaste tu contraseña?</a>
         </p>
       </div>
 

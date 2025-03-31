@@ -1,4 +1,3 @@
-// src/Pages/Bienvenida/Components/Buttons.jsx
 import React from 'react';
 import './Bienvenida.css';
 

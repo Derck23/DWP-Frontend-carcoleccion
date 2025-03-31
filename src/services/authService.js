@@ -8,8 +8,6 @@ export const registerUser = async (email, username, password, fullname) => {
             contra: password,
             nombre: fullname
         });
-        
-        // Si hay datos de MFA, devolverlos
         if (response.data.mfaSetup) {
             return {
                 ...response.data,
@@ -19,6 +17,18 @@ export const registerUser = async (email, username, password, fullname) => {
         return response.data;
     } catch (error) {
         throw error.response?.data?.intMessage || "Error en el registro. Intente nuevamente.";
+    }
+};
+
+export const setupMFA = async (username, token) => {
+    try {
+        const response = await api.post("/verify-mfa", {
+            username,
+            token
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response?.data?.intMessage || "Error al configurar MFA";
     }
 };
 
@@ -62,18 +72,6 @@ export const verifyMFA = async (tempToken, mfaToken) => {
         throw new Error("Respuesta MFA inválida");
     } catch (error) {
         throw error.response?.data?.intMessage || "Error en verificación MFA";
-    }
-};
-
-export const setupMFA = async (username, token) => {
-    try {
-        const response = await api.post("/verify-mfa", {
-            username,
-            token
-        });
-        return response.data;
-    } catch (error) {
-        throw error.response?.data?.intMessage || "Error al configurar MFA";
     }
 };
 

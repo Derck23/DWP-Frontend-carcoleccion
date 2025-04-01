@@ -1,13 +1,11 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://dwp-backend-carcoleccion.up.railway.app/api",
+  baseURL: "https://dwp-backend-carcoleccion.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
-    "X-Requested-With": "XMLHttpRequest"
   },
-  withCredentials: true,
-  crossDomain: true // Añade esta línea
+  withCredentials: true, // IMPORTANTE: Solo funcionará si el backend lo permite
 });
 
 // Interceptor para adjuntar el token en cada petición

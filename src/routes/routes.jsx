@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import 'antd/dist/reset.css';
 import Login from '../Pages/Login/Login';
 import Registro from '../Pages/Registro/Registro';
@@ -24,7 +24,7 @@ import Escala164A from '../Pages/EscalasAdministrador/Escala164A';
 const AppRoutes = () => {
     const basename = window.location.pathname.startsWith('/build') ? '/build' : '';
     return (
-        <BrowserRouter basename={basename}>
+        <Router>
             <Routes>
                 <Route path="/" element={<Bienvenida />} />
                 <Route path="/404" element={<Error404 />} />
@@ -45,7 +45,7 @@ const AppRoutes = () => {
                 <Route path="/perfil" element={<ProtectedRoute><Perfil /></ProtectedRoute>} />
                 <Route path="/forgot-password" element={<PasswordRecoveryFlow />} />
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
 };
 

@@ -22,8 +22,9 @@ import Escala143A from '../Pages/EscalasAdministrador/Escala143A';
 import Escala164A from '../Pages/EscalasAdministrador/Escala164A';
 
 const AppRoutes = () => {
+    const basename = window.location.pathname.startsWith('/build') ? '/build' : '';
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename={basename}>
             <Routes>
                 <Route path="/" element={<Bienvenida />} />
                 <Route path="/404" element={<Error404 />} />

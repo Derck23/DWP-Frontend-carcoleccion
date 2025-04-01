@@ -4,8 +4,10 @@ const api = axios.create({
   baseURL: "https://dwp-backend-carcoleccion.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
+    "X-Requested-With": "XMLHttpRequest" // Ayuda con algunos servidores
   },
-  withCredentials: true, // IMPORTANTE: Solo funcionará si el backend lo permite
+  withCredentials: true,
+  timeout: 10000 // Añade timeout para evitar esperas infinitas
 });
 
 // Interceptor para adjuntar el token en cada petición

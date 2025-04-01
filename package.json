@@ -19,12 +19,11 @@
     "speakeasy": "^2.0.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "echo 'Deployment configured'"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
